@@ -1,3 +1,64 @@
-h1 {
-  color: red;
+body{
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/f1/f2/df/f1f2df7f768f16a3d5ac127815857405.jpg")
+}
+
+@keyframes move {
+  from {transform: translateX(0px);}
+  to {transform: translateX(2500px);}
+}
+@keyframes flash {
+  0% {opacity: 0; }
+  50% {opacity: .5; }
+  100% {opacity: 1; }
+}
+@keyframes flip {
+  to {transform: translateX(2000px);}
+  from
+0% {transform: rotate(90deg);}
+50% {transform: rotate(180deg);}
+100% {transform: rotate(360deg);}
+}
+
+.cloud {
+  width: 20%;
+  animation-name: move;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position:absolute;
+}
+
+/*.rain {
+  width: 5%;
+  height: 7.5%;
+  animation-name: raining;
+  animation-fill-mode:forwards;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  position: absolute;*/
+
+.lighting {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 10%;
+  transform: rotate(30deg);
+  animation-name: flash;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+animation-timing-function: steps(3,1|10);
+}
+
+.cloudstatic {
+  position:absolute;
+  width: 25%;
+  margin-left: 50%;
+}
+
+.sparkle {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 35%;
+  animation-name: flip;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
